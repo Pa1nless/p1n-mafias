@@ -181,7 +181,7 @@ AddEventHandler('mafias:bossActions', function(jobdata)
             if closestPlayer == -1 or closestDistance > 3.0 then
                 ESX.ShowNotification("No players Nearby")
             else
-                riggerServerEvent('mafias:promote', GetPlayerServerId(closestPlayer))
+                TriggerServerEvent('mafias:promote', GetPlayerServerId(closestPlayer))
             end
         elseif action == 'descend' then 
             local closestPlayer, closestDistance = ESX.Game.GetClosestPlayer()
